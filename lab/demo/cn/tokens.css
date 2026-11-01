@@ -9,13 +9,13 @@
   --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
   --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
-  --color-paper: oklch(96% 0.014 85); --color-paper-2: oklch(93% 0.018 82); --color-paper-3: oklch(89% 0.020 80);
-  --color-ink: oklch(21% 0.012 55); --color-ink-2: oklch(31% 0.012 55); --color-muted: oklch(47% 0.014 65);
-  --color-rule: oklch(84% 0.016 80); --color-rule-2: oklch(64% 0.016 72);
-  --color-accent: oklch(50% 0.170 28); --color-accent-ink: oklch(97% 0.012 85); --color-focus: oklch(52% 0.170 28);
-  --font-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
-  --font-body: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
-  --font-label: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-heavy: 2px; --shadow-card: none;
-  --tracking-display: 0; --display-weight: 900;
+  --color-paper: oklch(96% 0.012 85); --color-paper-2: oklch(93.5% 0.016 82); --color-paper-3: oklch(90% 0.018 80);
+  --color-ink: oklch(23% 0.014 55); --color-ink-2: oklch(35% 0.012 60); --color-muted: oklch(48% 0.014 65);
+  --color-rule: oklch(86% 0.014 80); --color-rule-2: oklch(68% 0.016 72);
+  --color-accent: oklch(52% 0.165 30); --color-accent-ink: oklch(97% 0.012 85); --color-focus: oklch(52% 0.165 30);
+  --font-display: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  --font-body: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --shadow-card: none;
+  --shadow-slip: 0 1px 2px oklch(40% 0.03 60 / 0.10), 0 8px 24px oklch(40% 0.03 60 / 0.08);
+  --tracking-display: 0.01em; --display-weight: 600;
 }

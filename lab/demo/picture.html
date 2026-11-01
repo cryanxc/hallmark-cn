@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>主题配图</title>
+<style>
+/* 按原版 references/themes/*.jpg 的版式拼图：1440x900 的首屏和第二屏各缩到 960x600，中间 8px 灰缝。
+   用法：picture.html?page=cn&second=menu，再以 960x1208 截图。 */
+:root { --seam: oklch(62% 0 0); }
+html, body { margin: 0; background: var(--seam); overflow: hidden; }
+.screen { inline-size: 960px; block-size: 600px; overflow: hidden; position: relative; }
+.screen + .screen { margin-top: 8px; }
+iframe { inline-size: 1440px; block-size: 900px; border: 0; transform: scale(0.6667); transform-origin: 0 0; position: absolute; top: 0; left: 0; }
+</style>
+</head>
+<body>
+<div class="screen"><iframe id="a" scrolling="no" title="首屏"></iframe></div>
+<div class="screen"><iframe id="b" scrolling="no" title="第二屏"></iframe></div>
+<script>
+const q = new URLSearchParams(location.search);
+const page = q.get('page') || 'cn';
+document.getElementById('a').src = `${page}/`;
+document.getElementById('b').src = `${page}/#${q.get('second') || 'menu'}`;
+</script>
+</body>
+</html>

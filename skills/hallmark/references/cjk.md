@@ -15,7 +15,7 @@
 
 | 主题的 display 类 | 中文标题 | 中文正文 |
 | --- | --- | --- |
-| roman-serif、high-contrast-serif、slab-serif | Noto Serif SC 600 到 900 | Noto Serif SC 400，或 Noto Sans SC 400（长文更稳） |
+| roman-serif、high-contrast-serif、slab-serif | Noto Serif SC 600（大字号用 600 才清秀，900 会显得粗笨） | Noto Sans SC 400（宋体只做标题和导语，屏幕上长文用黑体） |
 | grotesk-sans、geometric-sans、rounded-sans、mono | Noto Sans SC 700 到 900 | Noto Sans SC 400 |
 | display-condensed、display-heavy、grotesk-heavy | ZCOOL QingKe HuangYou，或 Noto Sans SC 900 | Noto Sans SC 400 |
 | handwritten、pixel、blackletter | LXGW WenKai（霞鹜文楷）、Ma Shan Zheng（只做大标题） | Noto Sans SC 400 |
@@ -99,7 +99,8 @@ em:lang(zh) { font-style: normal; text-emphasis: filled dot; text-emphasis-posit
 <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 ```
 
-- 中文字体文件大：只加载用到的字重，正文最多两重，标题一重。
+- 中文字体文件大：只加载用到的字重，正文最多两重，标题一重。页面文字固定时（落地页、作品集），用 Google Fonts 的 `&text=` 参数只取页面里出现的字，几 MB 降到几百 KB（请求 `css2?family=...&text=<页面全部文字>`，把返回的 woff2 存进项目）。
+- 不留空的图片框：没有用户照片时用 `theme.mjs photos` 从图库取真实照片，一个灰色占位框比编造的图更显得没做完。
 - 无论用哪种来源，字体栈末尾的系统字体都要在，加载失败时页面仍然像样。
 
 ## 7. 中文文案 slop 黑名单

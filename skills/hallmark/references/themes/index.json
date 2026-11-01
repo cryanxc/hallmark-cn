@@ -1703,7 +1703,8 @@
    "material": "cool white sheet, graphite ink, Noto Sans SC at 700 with Figtree for Latin and figures, hairline grids, 8px corners, one deep navy for actions only",
    "file": "references/themes/shangwu.md",
    "photo": "muted",
-   "pictured": "Split Studio, Stage hero"
+   "pictured": "Split Studio, Stage hero",
+   "picture": "references/themes/shangwu.jpg"
   },
   {
    "name": "Solstice",
@@ -2383,10 +2384,11 @@
     "chinese",
     "calligraphy"
    ],
-   "material": "warm rice paper, soot-black ink, Noto Serif SC at 900 for heads over the same Song face for reading, hairline ink rules, square corners, one cinnabar seal red",
+   "material": "warm rice paper, soot ink, Noto Serif SC at 600 set large over Noto Sans SC for reading, paper slips with vertical type, hairline rules, square corners, one cinnabar seal",
    "file": "references/themes/xuanzhi.md",
    "photo": "warm sat=-12 con=3",
-   "pictured": "Long Document, Ledge hero"
+   "pictured": "Split Studio, Ledge hero",
+   "picture": "references/themes/xuanzhi.jpg"
   },
   {
    "name": "Yeshi",
@@ -2437,7 +2439,8 @@
    "material": "blue-black night, warm white type, ZCOOL QingKe HuangYou heads over Noto Sans SC, signboard blocks with 2px tube outlines, one hot neon pink and a sodium yellow for prices",
    "file": "references/themes/yeshi.md",
    "photo": "natural sat=8 con=10",
-   "pictured": "Poster hero, Catalogue"
+   "pictured": "Poster hero, Catalogue",
+   "picture": "references/themes/yeshi.jpg"
   }
  ]
 }

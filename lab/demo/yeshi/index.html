@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="老周煎饼，夜市里的煎饼果子摊：晚六点出摊，凌晨两点收摊，8 元起。">
+<title>老周煎饼，晚六点出摊</title>
+<link rel="stylesheet" href="../fonts/yeshi.css">
+<style>
+/* Hallmark · shape: Poster · genre: playful · theme: Yeshi (by request) · job: visit · hero: Poster · nav: edge-aligned · footer: address band · imagery: photographs (Wikimedia Commons) · signature: the menu as a lit signboard with prices in sodium yellow
+ * axes: dark/display-heavy/chromatic-pink · contrast: pass · fold: pass · v2.0.0 · cjk: references/cjk.md (demo for hallmark-cn) */
+@import url("./tokens.css");
+@import url("./base.css");
+html { line-break: strict; text-autospace: normal; text-spacing-trim: normal; }
+body { color: var(--color-ink-2); line-height: 1.75; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: var(--display-weight); color: var(--color-ink); letter-spacing: var(--tracking-display); line-height: 1.15; word-break: keep-all; max-width: none; }
+a { color: inherit; text-decoration-color: var(--color-accent); text-underline-offset: 0.25em; }
+
+.notice { background: var(--color-accent); color: var(--color-accent-ink); text-align: center; font-size: var(--text-sm); font-weight: 500; padding-block: var(--space-xs); }
+nav { display: flex; justify-content: space-between; align-items: center; padding-block: var(--space-lg); }
+.mark { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-ink); text-decoration: none; letter-spacing: 0.04em; }
+nav ul { display: flex; gap: var(--space-xl); list-style: none; margin: 0; padding: 0; font-size: var(--text-sm); align-items: center; }
+nav ul a { text-decoration: none; }
+
+.hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xl); align-items: center; padding-block: var(--space-lg) var(--space-3xl); }
+.hero h1 { font-size: clamp(3.5rem, 6.5vw + 0.5rem, 7.5rem); line-height: 1.08; text-shadow: 0 0 0.35em color-mix(in oklab, var(--color-accent) 45%, transparent); }
+@media (prefers-reduced-motion: no-preference) { .hero h1 { animation: switch-on var(--dur-long) var(--ease-out) both; } }
+@keyframes switch-on { from { opacity: 0.2; } to { opacity: 1; } }
+.hero p { margin-top: var(--space-lg); font-size: var(--text-lead); max-inline-size: 20em; }
+.from { margin-top: var(--space-lg); display: flex; align-items: baseline; gap: var(--space-xs); color: var(--color-price); font-weight: 700; }
+.from b { font-family: var(--font-display); font-weight: 400; font-size: var(--text-display-s); line-height: 1; }
+.actions { display: flex; gap: var(--space-sm); margin-top: var(--space-xl); flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 var(--space-lg); border-radius: var(--radius-pill); border: var(--rule-tube) solid var(--color-ink); text-decoration: none; font-weight: 500; color: var(--color-ink); transition: filter var(--dur-short) var(--ease-out); }
+.btn--primary { background: var(--color-accent); color: var(--color-accent-ink); border-color: var(--color-accent); }
+.btn:hover { filter: brightness(1.12); }
+.btn:active { filter: brightness(0.95); }
+.frame { border: var(--rule-tube) solid var(--color-accent); border-radius: var(--radius-card); padding: var(--space-xs); box-shadow: 0 0 32px color-mix(in oklab, var(--color-accent) 25%, transparent); margin: 0; }
+.frame img { inline-size: 100%; aspect-ratio: 4 / 3.2; object-fit: cover; border-radius: 2px; filter: saturate(1.08) contrast(1.1) brightness(0.92); }
+.frame figcaption { display: flex; justify-content: space-between; padding: var(--space-xs) var(--space-2xs) 0; font-size: var(--text-xs); color: var(--color-muted); }
+
+.menu { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-2xl); padding-block: var(--space-2xl) var(--space-3xl); align-items: stretch; }
+.board { background: var(--color-paper-2); border: var(--rule-tube) solid var(--color-ink); border-radius: var(--radius-card); padding: var(--space-xl); }
+.board h2 { font-size: var(--text-display-s); }
+.board h2 small { font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-muted); margin-inline-start: var(--space-sm); letter-spacing: 0; }
+.board ul { list-style: none; margin: var(--space-lg) 0 0; padding: 0; }
+.board li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-2xs) var(--space-lg); padding-block: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); }
+.board li b { color: var(--color-ink); font-size: var(--text-lg); font-weight: 700; }
+.board li span { grid-column: 1; font-size: var(--text-sm); color: var(--color-muted); }
+.board li .price { grid-row: 1 / span 2; grid-column: 2; align-self: center; color: var(--color-price); font-weight: 700; font-size: var(--text-xl); font-variant-numeric: tabular-nums; }
+.price small { font-size: 0.6em; margin-inline-end: 2px; }
+.side { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: var(--space-lg); }
+.side img { inline-size: 100%; block-size: 100%; min-block-size: 280px; object-fit: cover; border-radius: var(--radius-card); filter: saturate(1.08) contrast(1.1) brightness(0.85); }
+.side p { font-size: var(--text-md); }
+.side p b { color: var(--color-ink); }
+
+.band { background: var(--color-accent); color: var(--color-accent-ink); }
+.band .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xl); padding-block: var(--space-2xl); align-items: center; }
+.band h2 { color: var(--color-accent-ink); font-size: var(--text-display-s); }
+.band dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-lg); margin: 0; }
+.band dt { font-size: var(--text-xs); font-weight: 500; }
+.band dd { margin: var(--space-2xs) 0 0; font-size: var(--text-lg); font-weight: 700; line-height: 1.45; }
+footer { padding-block: var(--space-xl); font-size: var(--text-xs); color: var(--color-muted); display: flex; justify-content: space-between; gap: var(--space-lg); flex-wrap: wrap; }
+
+@media (max-width: 60rem) {
+  .hero, .menu, .band .container { grid-template-columns: minmax(0, 1fr); }
+  .band dl { grid-template-columns: minmax(0, 1fr); }
+  nav ul li:not(:last-child) { display: none; }
+}
+</style>
+</head>
+<body>
+<p class="notice">今晚照常出摊，下雨也在，棚子底下等你</p>
+<div class="container">
+  <nav aria-label="主导航">
+    <a class="mark" href="#">老周煎饼</a>
+    <ul><li><a href="#menu">菜单</a></li><li><a href="#where">在哪</a></li><li><a class="btn btn--primary" href="#where">今晚几点</a></li></ul>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>凌晨两点<br>还热乎</h1>
+      <p>一张鏊子摊了十二年，面糊现调，薄脆现炸，酱是自己熬的。</p>
+      <p class="from"><span>煎饼果子</span><b>¥8</b><span>起</span></p>
+      <div class="actions">
+        <a class="btn btn--primary" href="#menu">看菜单</a>
+        <a class="btn" href="#where">怎么找到摊子</a>
+      </div>
+    </div>
+    <figure class="frame">
+      <img src="../photos/ys-griddle.jpg" alt="戴白帽的师傅在冒着热气的鏊子上摊开面糊" width="960" height="720">
+      <figcaption><span>鏊子，晚上八点</span><span>12 年</span></figcaption>
+    </figure>
+  </header>
+</div>
+
+<div class="container menu" id="menu">
+  <section class="board" aria-labelledby="menu-h">
+    <h2 id="menu-h">今晚的菜单<small>加什么都现做</small></h2>
+    <ul>
+      <li><b>煎饼果子</b><span>一个蛋，一片薄脆，葱花香菜随意</span><span class="price"><small>¥</small>8</span></li>
+      <li><b>加蛋</b><span>最多加到三个，再多鏊子放不下</span><span class="price"><small>¥</small>2</span></li>
+      <li><b>加里脊</b><span>现煎，刷一层甜面酱</span><span class="price"><small>¥</small>5</span></li>
+      <li><b>热豆浆</b><span>大杯，不加糖也行</span><span class="price"><small>¥</small>4</span></li>
+    </ul>
+  </section>
+  <aside class="side">
+    <img src="../photos/ys-chilli.jpg" alt="市场里一盆盆新鲜辣椒，从上往下拍" width="1280" height="1015" loading="lazy">
+    <p><b>辣酱自己熬。</b>每周一熬一锅，微辣、中辣、变态辣三档，摊子上可以先尝。</p>
+  </aside>
+</div>
+
+<section class="band" id="where">
+  <div class="container">
+    <h2>今晚在这</h2>
+    <dl>
+      <div><dt>位置</dt><dd>大学路夜市<br>东口第三个摊</dd></div>
+      <div><dt>出摊</dt><dd>18:00 至 次日 2:00<br>周二休息</dd></div>
+      <div><dt>排队</dt><dd>十点前人少<br>可以微信先点</dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer class="container">
+  <span>老周煎饼，hallmark-cn 夜市主题演示页；摊名、地址、价格为虚构示例</span>
+  <span>照片：<a href="https://commons.wikimedia.org/wiki/File:China-Beijing-pancakemaker-1230619.jpg">ermell</a>（CC BY-SA 4.0），<a href="https://commons.wikimedia.org/wiki/File:Capsicum_baccatum_in_Sa%C3%BAde_flea_market,_S%C3%A3o_Paulo,_Brazil.jpg">Wilfredor</a>（CC BY-SA 4.0），Wikimedia Commons</span>
+</footer>
+</body>
+</html>
