@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>三联对比：上海独立咖啡店落地页</title>
+<style>
+:root { --bg: oklch(18% 0.01 260); --fg: oklch(96% 0.01 90); --muted: oklch(72% 0.01 260); --hit: oklch(74% 0.17 145); }
+* { box-sizing: border-box; }
+html, body { margin: 0; overflow-x: clip; background: var(--bg); color: var(--fg); font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; }
+header { padding: 20px 28px 12px; }
+h1 { margin: 0; font-size: 22px; font-weight: 700; }
+header p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+.row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 12px 28px 28px; }
+figure { margin: 0; }
+figcaption { font-size: 15px; font-weight: 700; padding: 0 0 8px; }
+figcaption span { color: var(--muted); font-weight: 400; margin-inline-start: 8px; }
+figure:last-child figcaption { color: var(--hit); }
+.frame { position: relative; aspect-ratio: 1440 / 1000; overflow: hidden; border-radius: 6px; }
+.frame iframe { position: absolute; top: 0; left: 0; width: 1440px; height: 1000px; border: 0; transform-origin: 0 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>同一句提示词：「做一个上海独立咖啡店的落地页」</h1>
+  <p>左：裸 AI 的典型产出　中：原版 Hallmark 主题直接套中文　右：hallmark-cn 宣纸主题 + 中文排版层</p>
+</header>
+<div class="row">
+  <figure><figcaption>裸 AI<span>紫色渐变、emoji 图标、编造数据</span></figcaption><div class="frame"><iframe src="bare/" title="裸 AI 版本" scrolling="no"></iframe></div></figure>
+  <figure><figcaption>原版 Hallmark<span>英文字体回退，标题行距叠字</span></figcaption><div class="frame"><iframe src="original/" title="原版 Hallmark 版本" scrolling="no"></iframe></div></figure>
+  <figure><figcaption>hallmark-cn<span>思源宋体 900，行高 1.8，全角标点</span></figcaption><div class="frame"><iframe src="cn/" title="中文版" scrolling="no"></iframe></div></figure>
+</div>
+<script>
+const fit = () => document.querySelectorAll('.frame').forEach((f) => { f.firstElementChild.style.transform = `scale(${f.clientWidth / 1440})`; });
+addEventListener('resize', fit); fit();
+</script>
+</body>
+</html>

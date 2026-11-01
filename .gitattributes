@@ -1,0 +1,5 @@
+# 统一 LF：Windows 上 git clone 后 SKILL.md 变 CRLF，原版 refcheck 会拒绝安装
+* text=auto eol=lf
+*.bat text eol=crlf
+*.jpg binary
+*.png binary
